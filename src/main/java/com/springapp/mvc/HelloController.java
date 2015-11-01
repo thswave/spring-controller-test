@@ -7,20 +7,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/")
 public class HelloController {
 
 	@Autowired
 	HelloService helloService;
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 		return "hello";
 	}
 
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String testMethod() {
+	@RequestMapping(value = "test1", method = RequestMethod.GET)
+	public String test1() {
 
+		return "test";
 	}
 }
